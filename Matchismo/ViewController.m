@@ -7,18 +7,24 @@
 //
 
 #import "ViewController.h"
-#import "PlayingCardDeck.h"
-#import "CardMatchingGame.h"
+
 
 @interface ViewController ()
-@property (strong,nonatomic) CardMatchingGame *game;
+
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *gameMode;
+@property (weak, nonatomic) IBOutlet UILabel *matchResult;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *gameMode;
 @end
 
 @implementation ViewController
 
+- (UISegmentedControl *)gameMode {
+    if (!_gameMode) {
+        _gameMode = [[UISegmentedControl alloc] init];
+    }
+    return _gameMode;
+}
 
 - (CardMatchingGame *)game {
     if (!_game) {
@@ -29,18 +35,40 @@
 }
 
 
-- (PlayingCardDeck *)createDeck {
-    return [[PlayingCardDeck alloc] init];
+- (Deck *)createDeck {  //abstract
+    return nil;
 }
 
 - (IBAction)redealCards {
     self.game = nil;
     [self updateUI];
     [self.gameMode setEnabled:YES];
+    if (self.gameMode.selectedSegmentIndex == 1) {
+        self.game.numberOfMatchedCards = 3;
+    } else {
+        self.game.numberOfMatchedCards = 2;
+    }
+    
 }
 
+- (IBAction)playHistory:(UISlider *)sender {
+    
+}
+
+
 - (IBAction)changeMode:(UISegmentedControl *)sender {
-    [sender addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+
+    NSUInteger index = sender.selectedSegmentIndex;
+    switch (index) {
+        case 0:
+            self.game.numberOfMatchedCards = 2;
+            NSLog(@"num: %ld",(unsigned long)self.game.numberOfMatchedCards);
+            break;
+        case 1:
+            self.game.numberOfMatchedCards = 3;
+            NSLog(@"num: %ld",(unsigned long)self.game.numberOfMatchedCards);
+            break;
+    }
 }
 
 
@@ -50,35 +78,24 @@
     [self.game chooseCardAtIndex:chooseButtonIndex];
     [self updateUI];
     
-    
 }
 
-- (void)segmentAction:(UISegmentedControl *)seg {
-    NSUInteger index = seg.selectedSegmentIndex;
-    
-    switch (index) {
-        case 0:
-            NSLog(@"index: %ld",index);
-            break;
-        case 1:
-            NSLog(@"index: %ld",index);
-            break;
-    }
-}
 
 -(void)updateUI{
     for (UIButton *cardButton in self.cardButtons) {
         NSUInteger cardButtonIndex = [self.cardButtons indexOfObject:cardButton];
         Card *card = [self.game cardAtIndex:cardButtonIndex];
-        [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
+        [cardButton setAttributedTitle:[self foregroundTextForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld",(long)[self.game score]];
     }
+    
+    
 }
 
-- (NSString *)titleForCard:(Card *)card {
-    return card.isChosen ? card.contents :@"";
+- (NSAttributedString *)foregroundTextForCard:(Card *)card {
+    return nil;
 }
 
 - (UIImage *)backgroundImageForCard:(Card *)card {

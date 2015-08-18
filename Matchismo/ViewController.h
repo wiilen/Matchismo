@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Deck.h"
+#import "CardMatchingGame.h"
 
 @interface ViewController : UIViewController
 
-
+- (Deck *)createDeck;
+- (NSAttributedString *)foregroundTextForCard:(Card *)card;
+-(void)updateUI;
+- (UIImage *)backgroundImageForCard:(Card *)card;
+@property (strong,nonatomic) CardMatchingGame *game;
 @end
 

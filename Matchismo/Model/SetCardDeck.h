@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 WiilenLin. All rights reserved.
 //
 
-#import "SetCard.h"
+#import "Deck.h"
 
-@interface SetCardDeck : SetCard
+@interface SetCardDeck : Deck
 
 @end

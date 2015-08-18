@@ -12,20 +12,24 @@
 	<dict>
 		<key>7DF4378E03FA0C193CB5C60D5BF219F1AB946422</key>
 		<string>https://github.com/wiilen/iOS-dev.git</string>
+		<key>D15491D55186E65A3391306709440CF1A2E0654A</key>
+		<string>https://github.com/wiilen/Matchismo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Matchismo/Matchismo.xcodeproj</string>
+	<string>Matchismo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7DF4378E03FA0C193CB5C60D5BF219F1AB946422</key>
 		<string>../../..</string>
+		<key>D15491D55186E65A3391306709440CF1A2E0654A</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/wiilen/iOS-dev.git</string>
+	<string>https://github.com/wiilen/Matchismo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7DF4378E03FA0C193CB5C60D5BF219F1AB946422</string>
+	<string>D15491D55186E65A3391306709440CF1A2E0654A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>7DF4378E03FA0C193CB5C60D5BF219F1AB946422</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iOS%20dev</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D15491D55186E65A3391306709440CF1A2E0654A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Matchismo</string>
 		</dict>
 	</array>
 </dict>

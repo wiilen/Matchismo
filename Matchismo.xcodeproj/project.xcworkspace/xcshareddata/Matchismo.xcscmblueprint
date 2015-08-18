@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D15491D55186E65A3391306709440CF1A2E0654A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D15491D55186E65A3391306709440CF1A2E0654A" : 0,
+    "7DF4378E03FA0C193CB5C60D5BF219F1AB946422" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1A9CF7D-C01A-4CF2-ACCF-10EC212BEDC1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D15491D55186E65A3391306709440CF1A2E0654A" : "Matchismo\/",
+    "7DF4378E03FA0C193CB5C60D5BF219F1AB946422" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Matchismo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Matchismo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wiilen\/iOS-dev.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7DF4378E03FA0C193CB5C60D5BF219F1AB946422"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wiilen\/Matchismo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D15491D55186E65A3391306709440CF1A2E0654A"
+    }
+  ]
+}
